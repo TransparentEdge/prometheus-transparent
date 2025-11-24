@@ -2,17 +2,33 @@
 
 Easy ready-to-run docker-compose stack to get and parse metrics from Transparent Edge API.
 
-## Getting started
+## Prerequisites
 
-- You need a valid `CID` and `CSECRET` pair. You can get them from T.E. Dashboard:
-  - Visit: https://dashboard.transparentedge.eu/user/profile  > (API Keys)
-- Clone this repo and edit `custom/prometheus/prometheus-te.yml` file with your own secret data:
-  - `git clone https://github.com/sistemasTES/prometheus-transparent.git`
-  - `cd prometheus-transparent/ && vim custom/prometheus/prometheus-te.yml`
-- Run it! 
-  - `docker compose up -d`
+- Docker and Docker Compose installed
+- A valid `CID` and `CSECRET` pair from Transparent Edge Dashboard
+  - Visit: https://dashboard.transparentedge.eu/user/profile > (API Keys)
 
-## Folder structure
+## Getting Started
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/sistemasTES/prometheus-transparent.git
+   cd prometheus-transparent/
+   ```
+
+2. Configure your API credentials:
+   ```bash
+   vim custom/prometheus/prometheus-te.yml
+   ```
+   Add your `CID` and `CSECRET` to the configuration file.
+
+3. Start the stack:
+   ```bash
+   docker compose up -d
+   ```
+
+## Folder Structure
+
 ```
 │
 ├── README.md
@@ -32,3 +48,6 @@ Easy ready-to-run docker-compose stack to get and parse metrics from Transparent
 └── docker-compose.yml
 ```
 
+## Documentation
+
+For detailed information about available metrics, see [prometheus-metrics.md](prometheus-metrics.md).
